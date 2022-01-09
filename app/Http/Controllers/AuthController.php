@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Auth;
-
-//use Illuminate\Support\Facades\Hash;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -63,6 +61,7 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request){
+        
         auth()->user()->tokens()->delete();
 
         return response([
