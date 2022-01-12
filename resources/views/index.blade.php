@@ -15,5 +15,5 @@
     </div>
 </div> -->
 
-<home></home>
+<index></index>
 @endsection

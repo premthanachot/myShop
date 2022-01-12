@@ -26,7 +26,10 @@ Vue.use(Vuetify);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('home', require('./components/home.vue').default);
-// Vue.component('index', require('./components/index.vue').default);
+Vue.component('index', require('./components/index.vue').default);
+
+Vue.component('product-index', require('./pages/product/index.vue').default);
+// Vue.component('product-admin', require('./pages/product/admin.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

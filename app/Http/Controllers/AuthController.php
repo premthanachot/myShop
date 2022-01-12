@@ -53,7 +53,7 @@ class AuthController extends Controller
         $token = $user->createtoken('myshop')->plainTextToken;
 
         $reponse = [
-            'name'=>$user,
+            'user'=>$user,
             'token'=>$token,
         ];
 

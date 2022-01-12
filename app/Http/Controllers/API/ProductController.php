@@ -41,6 +41,25 @@ class ProductController extends Controller
         ]);
         $product = Product::create($request->all());
         return $product;
+
+        // $user = $request->user();
+        // $user_id = $user->id;
+
+        // $request->validate([
+        //     'name'          =>  'required',
+        //     'description'   =>  'required',
+        //     'price'         =>  'required',
+        // ]);
+
+        // $product = new Product;
+        // $product->name = $request->name;
+        // $product->description = $request->description;
+        // $product->price = $request->price;
+        // $product->image = $request->image;
+        // $product->user_id = $user_id;
+        // $product->save();
+
+        // return $product;
     }
 
     /**
@@ -98,9 +117,9 @@ class ProductController extends Controller
     }
 
     public function search($name){
-        $product = Product::where([
+        $products = Product::where([
             ['name','like','%'.$name.'%']
         ])->get();
-        return $product;
+        return $products;
     }
 }
